@@ -6,6 +6,7 @@
 	<title>SUPERSCROLLORAMA</title>
 	
 	<link href='http://fonts.googleapis.com/css?family=Luckiest+Guy' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/normalize.css" type="text/css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">	
 </head>
@@ -17,6 +18,7 @@
 		<div class="hills"></div>
 		<div class="ground"></div>
 		<div class="car"></div>
+		<div class="popup"><h2>Choose:</h2><div class="image-choice"><a href="#"><img src="http://placekitten.com/100/100"></a><a href="#"><img src="http://placekitten.com/100/100"></a></div></div>
 
 	</div>
 	<script type="text/javascript" src="js/greensock/TweenMax.min.js"></script>
@@ -53,6 +55,8 @@
           1000 // scroll duration of tween
           );
 
+
+			controller.addTween('.popup', TweenMax.fromTo( $('.popup'), .25, {css:{opacity: 0, left: '1000px'}, immediateRender:true, ease:Quad.easeOut}, {css:{opacity: 1, left: 0}, ease:Quad.easeInOut}), 400); // 100 px offset for better timing
 
 		});
 	</script>
