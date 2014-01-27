@@ -1,0 +1,59 @@
+body {
+  background: #333;
+  margin: 0;
+  padding: 0;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#content-wrapper {
+  height: 1600px;
+  width: 1290px;
+  position: relative;
+  margin: 0 auto;
+  background: #7cbad7;
+  text-shadow: 1px 1px 1px #000, 3px 3px 5px #325b6e;
+  overflow: hidden;
+}
+
+.bg {
+  width: 1290px;
+  height: 1000px;
+  position: absolute;
+  background: transparent url(../img/hill.png) 0 0 no-repeat;
+}
+
+.car {
+  position: absolute;
+  left: 2000px;
+  top: 200px;
+  width: 400px;
+  height: 710px;
+  background: transparent url(../img/car.png) 0 300px no-repeat;
+}
+
+.sun {
+  position: absolute;
+  left: -400px;
+  top: -200px;
+  width: 2000px;
+  height: 2000px;
+  background: transparent url(../img/starburst.png) 0 0 no-repeat;
+}
+
+h1 {
+  font-family: 'Luckiest Guy', sans-serif;
+  font-weight: normal;
+  color: #ffb000;
+  width: 100%;
+  font-size: 7em;
+  text-align: center;
+  top: 200px;
+  position: absolute;
+  z-index: 100;
+}

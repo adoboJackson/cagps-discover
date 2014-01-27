@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"> 
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<title>SUPERSCROLLORAMA</title>
+	
+	<link href='http://fonts.googleapis.com/css?family=Luckiest+Guy' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/normalize.css" type="text/css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">	
+</head>
+<body>
+	<div id="content-wrapper">
+		<h1 class="smush">The Luckiest Guy</h1>
+		<div class="sun"></div>
+		<div class="bg"></div>
+		<div class="car"></div>
+
+
+	</div>
+	<script type="text/javascript" src="js/greensock/TweenMax.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  	<script>window.jQuery || document.write('<script src="_/js/jquery-1.9.1.min.js"><\/script>')</script>
+  	<script src="js/jquery.superscrollorama.js"></script>
+	<script>
+		$(document).ready(function() {
+			// This example adds a duration to the tweens so they are synced to the scroll position
+
+			var controller = $.superscrollorama();
+			
+			// amount of scrolling over which the tween takes place (in pixels)
+			var scrollDuration = 1000; 
+
+			// individual element tween examples
+			controller.addTween('.smush', TweenMax.fromTo( $('.smush'), .25, {css:{'letter-spacing': '10px'}, immediateRender:true, ease:Quad.easeOut}, {css:{'letter-spacing': '-10px'}, ease:Quad.easeInOut}), scrollDuration); // 100 px offset for better timing
+
+			controller.addTween('.car', TweenMax.fromTo( $('.car'), .25, {css:{left:2000}, immediateRender:true, ease:Quad.easeOut}, {css:{left:-200}, ease:Quad.easeInOut}), scrollDuration); // 100 px offset for better timing
+
+		});
+	</script>
+
+</body></html>
