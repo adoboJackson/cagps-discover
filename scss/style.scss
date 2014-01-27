@@ -21,7 +21,15 @@ body {
 		text-shadow: 1px 1px 1px #000, 3px 3px 5px #325b6e;
 		overflow: hidden;
 	}
-	.bg{
+	.mts{
+		position: absolute;
+		left:0;
+		top:100px;
+		width: 1300px;
+		height: 737px;
+		background: transparent url(../img/mts.png) 0 0 no-repeat;
+	}
+	.hills{
 		width: 1290px;
 		height: 1000px;
 		position: absolute;
@@ -35,6 +43,7 @@ body {
 		height: 710px;
 		background: transparent url(../img/car.png) 0 300px no-repeat;
 	}
+
 	.sun{
 		position: absolute;
 		left:-400px;

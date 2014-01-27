@@ -21,7 +21,16 @@ body {
   overflow: hidden;
 }
 
-.bg {
+.mts {
+  position: absolute;
+  left: 0;
+  top: 100px;
+  width: 1300px;
+  height: 737px;
+  background: transparent url(../img/mts.png) 0 0 no-repeat;
+}
+
+.hills {
   width: 1290px;
   height: 1000px;
   position: absolute;

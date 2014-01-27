@@ -13,7 +13,8 @@
 	<div id="content-wrapper">
 		<h1 class="smush">The Luckiest Guy</h1>
 		<div class="sun"></div>
-		<div class="bg"></div>
+		<div class="mts"></div>
+		<div class="hills"></div>
 		<div class="car"></div>
 
 
@@ -35,6 +36,23 @@
 			controller.addTween('.smush', TweenMax.fromTo( $('.smush'), .25, {css:{'letter-spacing': '10px'}, immediateRender:true, ease:Quad.easeOut}, {css:{'letter-spacing': '-10px'}, ease:Quad.easeInOut}), scrollDuration); // 100 px offset for better timing
 
 			controller.addTween('.car', TweenMax.fromTo( $('.car'), .25, {css:{left:2000}, immediateRender:true, ease:Quad.easeOut}, {css:{left:-200}, ease:Quad.easeInOut}), scrollDuration); // 100 px offset for better timing
+
+
+        // parallax example
+        controller.addTween(
+          '.mts',
+          (new TimelineLite())
+            .append([
+              TweenMax.fromTo($('.mts'), 1, 
+                {css:{top: 400}, immediateRender:true}, 
+                {css:{top: 400}}),
+              TweenMax.fromTo($('.hills'), 1, 
+                {css:{top: 300}, immediateRender:true}, 
+                {css:{top: 200}})
+            ]),
+          1000 // scroll duration of tween
+          );
+
 
 		});
 	</script>
