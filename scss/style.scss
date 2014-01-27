@@ -17,7 +17,7 @@ body {
 		width: 1290px;
 		position: relative;
 		margin: 0 auto;
-		background: $med_blue;
+		background: linear-gradient(top, $lt_blue, $med_blue);
 		text-shadow: 1px 1px 1px #000, 3px 3px 5px #325b6e;
 		overflow: hidden;
 	}
@@ -43,7 +43,14 @@ body {
 		height: 710px;
 		background: transparent url(../img/car.png) 0 300px no-repeat;
 	}
+	.ground{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 730px;
+		background: linear-gradient(top, #CCC, #999);
 
+	}
 	.sun{
 		position: absolute;
 		left:-400px;
